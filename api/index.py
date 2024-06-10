@@ -1,13 +1,13 @@
 from http.server import BaseHTTPRequestHandler
- 
-class handler(BaseHTTPRequestHandler):
 
-    # method to handle HTTP GET Request 
+class handler(BaseHTTPRequestHandler):
     def do_GET(self):
+
+          # the status
         self.send_response(200)
+        # the type of the function output
         self.send_header('Content-type','text/plain')
         self.end_headers()
-
-        message = "Welcome Roaa ^_^"
-        self.wfile.write(message.encode('utf-8'))
+        msg="welcome from 401 python class"
+        self.wfile.write(msg.encode())
         return
